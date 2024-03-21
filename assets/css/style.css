@@ -19,9 +19,7 @@ body {
     font-family:'Lato', sans-serif;
     
 }
-h1, 
-h2, 
-h3 {
+h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -48,17 +46,21 @@ header a {
     color: inherit;
 }
 
+
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
+
 #menu>li {
     margin-bottom: 1em;
 }
+
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
+
 /* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
@@ -70,22 +72,30 @@ nav {
     display: none;
     top: 100%;
 }
+
 /* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
+
 #nav-toggle {
     display: none;
 }
+
 .nav-toggle-label {
     font-size: 2rem;
 }
+
 /* Main content */
 main {
+    /* Enlarge main element to push footer down*/
+    flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
+    margin-top: 47px;
+    /* Enable flex preperties for child elements */
+    display: flex;
+    flex-direction: column;
     
-    /* Make main element take up any surplus space to push footer down */
-      flex: 1 0 auto;
-      margin-top: 47px;
 }
 /* Hero section */
 #hero {
@@ -94,6 +104,7 @@ main {
     background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
 }
+
 #cover-text {
     /* Final rgba value sets the opacity so it is semi-transparent */
     background-color: rgba(241, 109, 107, .7);
@@ -120,14 +131,18 @@ main {
     text-align: center;
     font-size: 280%;
 }
+
+
 #benefits-physical>div,
 #benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
+
 #benefits p {
     padding: 0 20px;
 }
+
 #benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
@@ -148,6 +163,8 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+
 /* Meetup Times section */
 #times {
     background: url('../images/dublin-city.webp') no-repeat center/cover;
@@ -155,6 +172,7 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
+
 #times div {
     color: #fafafa;
     background-color: rgba(0,0,0, .6);
@@ -167,19 +185,64 @@ main {
     /* Creates a grid of meetup times divs over the background image */
     border: 2px solid white;
 }
+
 #times h3 {
     /* Override the heading color set in general styles*/
     color: #fafafa;
 }
+
 /* Gallery page */
 #photos img {
     width: 100%;
     line-height: 1em;
 }
+
 #photos {
     line-height: 0;
 }
 
+/* Form */
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+
+}
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: #fafafa;
+    
+}
 /* Footer */
 #social-networks {
     text-align: center;
